@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* 基本レイアウト
+------------------------------------- */
+.wrapper {
+  width: 100%;
+}
+
+/* ヘッダー
+------------------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header__title {
+  width: 20%;
+}
+.header__navigation {
+  width: 80%;
+}
+.header__navigation ul li a {
+  font-size: 1.6rem;
+}
+
+/* フッター
+------------------------------------- */
+.footer__navigation ul {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+/* メインコンテンツエリア
+------------------------------------- */
+.section__item {
+  width: 30%;
+}
+
+/*---------------------------------------
+ secondページ用 
+----------------------------------------*/
+.main-visual__second-page {
+  width: 100%;
+}
+.main-visual__second-page img {
+  width: 100%;
+}
+.content {
+  width: 100%;
+}

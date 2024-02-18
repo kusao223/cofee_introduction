@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>珈琲豆知識</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style-pc.css">
+    <link rel="stylesheet" href="css/style-tb.css" media="only screen and (min-width:640px) and (max-width:979px)">
+    <link rel="stylesheet" href="css/style-sp.css" media="only screen and (max-width:639px)">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="nav" class="header">
+            <div class="header__title">
+                <h1 style="font-size: 2.5rem;">珈琲豆知識</h1>
+            </div>
+
+            <nav class="header__navigation">
+                <input type="checkbox" id="toggle-nav">
+                <label for="toggle-nav" class="button">
+                    <div></div>
+                    <div></div>
+                </label>
+                <div id="main-navigation" class="menu">
+                    <navigation-template></navigation-template>
+                </div>
+            </nav>
+        </header>
+
+        <div id="slider">
+            <div class="slider-outer">
+                <transition name="fade">
+                    <div class="slider-inner" :key="idx" v-for="(slide, idx) in slides" v-if="current_slide == idx">
+                        <img class="slide-img" v-bind:src="slides[idx].img" :key="slides[idx].img">
+                    </div>
+                </transition>
+            </div>
+        </div>
+
+        <div class="main__wrapper">
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame01.jpg" alt="珈琲豆">
+                    <h2>バリ・アラビカ神山</h2>
+                </a>
+            </section>
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame02.jpg" alt="珈琲豆">
+                    <h2>コロンビア・スプレモ</h2>
+                </a>
+            </section>
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame03.jpg" alt="珈琲豆">
+                    <h2>エクアドル・ルビーマウンテン</h2>
+                </a>
+            </section>
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame04.jpg" alt="珈琲豆">
+                    <h2>キリマンジャロ・キボーＡＡ</h2>
+                </a>
+            </section>
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame05.jpg" alt="珈琲豆">
+                    <h2>モカ・シダモ・スペシャル</h2>
+                </a>
+            </section>
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame06.jpg" alt="珈琲豆">
+                    <h2>グァテマラ・SHB・アンテグァ</h2>
+                </a>
+            </section>
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame07.jpg" alt="珈琲豆">
+                    <h2>キューバ・クリスタルマウンテン</h2>
+                </a>
+            </section>
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame08.jpg" alt="珈琲豆">
+                    <h2>ブルーマウンテン</h2>
+                </a>
+            </section>
+            <section class="section__item">
+                <a href="ko-hi.html">
+                    <img src="./images/mame09.jpg" alt="珈琲豆">
+                    <h2>メキシコ・メルセデス</h2>
+                </a>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <nav class="footer__navigation">
+                <div id="footer-navigation">
+                    <navigation-template></navigation-template>
+                </div>
+                <div id="copyright">
+                    <copyright-template></footer-template>
+                </div>
+            </nav>
+        </footer>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/carousel.js"></script>
+
+</body>
+
+</html>

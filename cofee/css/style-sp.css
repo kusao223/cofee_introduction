@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* 基本レイアウト
+------------------------------------- */
+.wrapper {
+  width: 100%;
+}
+
+/* ナビゲーションメニュー共通
+------------------------------------- */
+.header__navigation ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__navigation ul li a {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+/* トグルメニュー
+------------------------------------- */
+#toggle-nav {
+  display: none;
+}
+#toggle-nav:checked ~ .button div {
+  background-color: #2e0a0a;
+}
+#toggle-nav:checked ~ .button div:nth-of-type(1) {
+  margin-top: 2px;
+}
+#toggle-nav:checked ~ .button div:nth-of-type(2) {
+  margin-top: -2px;
+}
+#toggle-nav:checked ~ .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1020;
+  top: 16px;
+  right: 0px;
+  width: 32px;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+}
+.button div {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #2e0a0a;
+  transition: background-color 0.5s, transform 0.5s;
+}
+.button div:nth-of-type(2) {
+  margin: 4px 0;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+/* フッター共通
+------------------------------------- */
+.footer__navigation ul {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+/* メインコンテンツエリア
+------------------------------------- */
+.main__wrapper {
+  margin-top: 2rem;
+}
+.section__item {
+  width: 48%;
+}
+.section__item h2 {
+  font-size: 1.4rem;
+}
+.section__item p {
+  font-size: 1.2rem;
+}
+
+/*---------------------------------------
+ secondページ用 
+----------------------------------------*/
+.main-visual__second-page {
+  width: 100%;
+}
+.main-visual__second-page img {
+  width: 100%;
+}
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.content__img {
+  width: 98%;
+}
+.content__text {
+  width: 98%;
+}
